@@ -1,0 +1,44 @@
+@page
+
+<div>
+    <h1>Tela de equipe</h1>
+
+    @* Formulário de cadastro de equipes *@
+    <form method="POST" asp-action="CadastrarEquipe" asp-controller="Equipe">
+        <div class="form-control">
+            <label for="nome">Nome da equipe</label>
+            <input type="text" name="Nome">
+        </div>
+
+        <div class="form-control">
+            <label for="imagem">Imagem da equipe</label>
+            <input type="text" name="Imagem">
+        </div>
+
+        <button class="btn btn-primary" type="submit">Cadastrar</button>
+    </form>
+
+    <table class="table table-striped">
+        <thead>
+            <th>Id</th>
+            <th>Nome</th>
+            <th>Imagem</th>
+            <th>Ações</th>
+        </thead>
+
+        <tbody>
+            @foreach(Equipe equipe in ViewBag.ListaEquipes)
+            {
+                <tr>
+                    <td>@equipe.Id</td>
+                    <td>@equipe.Nome</td>
+                    <td>@equipe.Imagem</td>
+                    <td>
+                        @* Passando para a função de excluir a referencia do id da equipe *@
+                        <a asp-action="ExcluirEquipe" asp-asp-controller="Equipe" asp-route-id="@equipe.Id">Excluir</a>
+                    </td>
+                </tr>
+            }
+        </tbody>
+    </table>
+</div>

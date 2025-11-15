@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "huIxH5/TOrA=",
+  "dgSpecHash": "ZeK/YwDG/S8=",
   "success": true,
-  "projectFilePath": "C:\\Users\\marcelo.soliveira38\\OneDrive\\Logica de Programação\\04 - Desenvolvimento em C#\\MeuPrimeiroMvc\\MeuPrimeiroMvc.csproj",
+  "projectFilePath": "C:\\Users\\marcelo.soliveira38\\OneDrive - SENAC - SP\\Logica de Programação\\04 - Desenvolvimento em C#\\MeuPrimeiroMvc\\MeuPrimeiroMvc.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\marcelo.soliveira38\\.nuget\\packages\\azure.core\\1.38.0\\azure.core.1.38.0.nupkg.sha512",
     "C:\\Users\\marcelo.soliveira38\\.nuget\\packages\\azure.identity\\1.11.4\\azure.identity.1.11.4.nupkg.sha512",

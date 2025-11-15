@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\marcelo.soliveira38\\OneDrive\\Logica de Programação\\04 - Desenvolvimento em C#\\MeuPrimeiroMvc\\MeuPrimeiroMvc.csproj": {}
+    "C:\\Users\\marcelo.soliveira38\\OneDrive - SENAC - SP\\Logica de Programação\\04 - Desenvolvimento em C#\\MeuPrimeiroMvc\\MeuPrimeiroMvc.csproj": {}
   },
   "projects": {
-    "C:\\Users\\marcelo.soliveira38\\OneDrive\\Logica de Programação\\04 - Desenvolvimento em C#\\MeuPrimeiroMvc\\MeuPrimeiroMvc.csproj": {
+    "C:\\Users\\marcelo.soliveira38\\OneDrive - SENAC - SP\\Logica de Programação\\04 - Desenvolvimento em C#\\MeuPrimeiroMvc\\MeuPrimeiroMvc.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\marcelo.soliveira38\\OneDrive\\Logica de Programação\\04 - Desenvolvimento em C#\\MeuPrimeiroMvc\\MeuPrimeiroMvc.csproj",
+        "projectUniqueName": "C:\\Users\\marcelo.soliveira38\\OneDrive - SENAC - SP\\Logica de Programação\\04 - Desenvolvimento em C#\\MeuPrimeiroMvc\\MeuPrimeiroMvc.csproj",
         "projectName": "MeuPrimeiroMvc",
-        "projectPath": "C:\\Users\\marcelo.soliveira38\\OneDrive\\Logica de Programação\\04 - Desenvolvimento em C#\\MeuPrimeiroMvc\\MeuPrimeiroMvc.csproj",
+        "projectPath": "C:\\Users\\marcelo.soliveira38\\OneDrive - SENAC - SP\\Logica de Programação\\04 - Desenvolvimento em C#\\MeuPrimeiroMvc\\MeuPrimeiroMvc.csproj",
         "packagesPath": "C:\\Users\\marcelo.soliveira38\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\marcelo.soliveira38\\OneDrive\\Logica de Programação\\04 - Desenvolvimento em C#\\MeuPrimeiroMvc\\obj\\",
+        "outputPath": "C:\\Users\\marcelo.soliveira38\\OneDrive - SENAC - SP\\Logica de Programação\\04 - Desenvolvimento em C#\\MeuPrimeiroMvc\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
