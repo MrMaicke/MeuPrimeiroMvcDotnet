@@ -48,5 +48,25 @@ namespace MeuPrimeiroMvc.Controllers
 
             return RedirectToAction("Index");
         }
+
+        [Route("Atualizar/{idEquipe}")]
+        public IActionResult Atualizar(int idEquipe)
+        {
+            Equipe equipe = _context.Equipes.FirstOrDefault(x => x.Id == idEquipe);
+
+            ViewBag.Equipe = equipe;
+
+            return View();
+        }
+
+        [Route("AtualizarEquipe")]
+        public IActionResult AtualizarEquipe(Equipe equipe)
+        {
+            _context.Equipes.Update(equipe);
+
+            _context.SaveChanges();
+
+            return RedirectToAction("Index");
+        }
     }
 }

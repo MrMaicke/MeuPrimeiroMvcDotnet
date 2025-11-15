@@ -34,8 +34,9 @@
                     <td>@equipe.Nome</td>
                     <td>@equipe.Imagem</td>
                     <td>
+                        <a class="btn btn-primary" href="/Equipe/Atualizar/@equipe.Id">Atualizar</a>
                         @* Passando para a função de excluir a referencia do id da equipe *@
-                        <a asp-action="ExcluirEquipe" asp-asp-controller="Equipe" asp-route-id="@equipe.Id">Excluir</a>
+                        <a class="btn btn-danger" asp-action="ExcluirEquipe" asp-controller="Equipe" asp-route-id="@equipe.Id">Excluir</a>
                     </td>
                 </tr>
             }
