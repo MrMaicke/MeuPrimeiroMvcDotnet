@@ -14,6 +14,7 @@ namespace MeuPrimeiroMvc.Controllers
 
         public IActionResult Index()
         {
+            // .include() - trago os dados das tabelas relacionadas
             var listaJogadores = _context.Jogadors.ToList();
 
             ViewBag.ListaJogadores = listaJogadores;
@@ -33,6 +34,21 @@ namespace MeuPrimeiroMvc.Controllers
             _context.Add(jogador);
 
             // Registrar as alterações no banco de dados
+            _context.SaveChanges();
+
+            return RedirectToAction("Index");
+        }
+
+        // Na rota de excluir, vamos capturar o id que vem na url
+        [Route("ExcluirJogador/{idJogador}")]
+        public IActionResult ExcluirEquipe(int idJogador)
+        {
+            //Pegar o id de referência, e vou procurar a equipe no banco de dados
+            Jogador jogador = _context.Jogadors.FirstOrDefault(x => x.Id == idJogador); // select * from EQUIPE where id == (valor da equipe da tabela)
+
+
+            _context.Remove(jogador);
+
             _context.SaveChanges();
 
             return RedirectToAction("Index");

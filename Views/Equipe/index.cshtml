@@ -23,6 +23,7 @@
             <th>Id</th>
             <th>Nome</th>
             <th>Imagem</th>
+            <th>Ações</th>
         </thead>
 
         <tbody>
@@ -32,6 +33,10 @@
                     <td>@equipe.Id</td>
                     <td>@equipe.Nome</td>
                     <td>@equipe.Imagem</td>
+                    <td>
+                        @* Passando para a função de excluir a referencia do id da equipe *@
+                        <a asp-action="ExcluirEquipe" asp-asp-controller="Equipe" asp-route-id="@equipe.Id">Excluir</a>
+                    </td>
                 </tr>
             }
         </tbody>

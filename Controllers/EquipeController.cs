@@ -21,7 +21,7 @@ namespace MeuPrimeiroMvc.Controllers
 
             return View();
         }
-        
+
         [Route("cadastrar")]
         public IActionResult CadastrarEquipe(Equipe equipe)
         {
@@ -29,6 +29,21 @@ namespace MeuPrimeiroMvc.Controllers
             _context.Add(equipe);
 
             // Registrar as alterações no banco de dados
+            _context.SaveChanges();
+
+            return RedirectToAction("Index");
+        }
+
+        // Na rota de excluir, vamos capturar o id que vem na url
+        [Route("ExcluirEquipe/{idEquipe}")]
+        public IActionResult ExcluirEquipe(int idEquipe)
+        {
+            //Pegar o id de referência, e vou procurar a equipe no banco de dados
+            Equipe equipe = _context.Equipes.FirstOrDefault(x => x.Id == idEquipe); // select * from EQUIPE where id == (valor da equipe da tabela)
+
+
+            _context.Remove(equipe);
+
             _context.SaveChanges();
 
             return RedirectToAction("Index");

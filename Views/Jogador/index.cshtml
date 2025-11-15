@@ -39,7 +39,7 @@
             <th>Id</th>
             <th>Nome</th>
             <th>Email</th>
-            <th>IdEquipe</th>
+            <th>Ações</th>
         </thead>
 
         <tbody>
@@ -49,7 +49,12 @@
                     <td>@jogador.Id</td>
                     <td>@jogador.Nome</td>
                     <td>@jogador.Email</td>
-                    <td>@jogador.IdEquipe</td>
+                    @* Forma de conseguir acessar os dados da equipe relacionada com o jogador *@
+                    <td>@jogador.IdEquipeNavigation?.Nome</td>
+                    <td>
+                        @* Passando para a função de excluir a referencia do id do jogador *@
+                        <a asp-action="ExcluirJogador" asp-asp-controller="Jogador" asp-route-id="@jogador.Id">Excluir</a>
+                    </td>
                 </tr>
             }
         </tbody>
