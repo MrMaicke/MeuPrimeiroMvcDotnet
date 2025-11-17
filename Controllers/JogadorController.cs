@@ -41,13 +41,48 @@ namespace MeuPrimeiroMvc.Controllers
 
         // Na rota de excluir, vamos capturar o id que vem na url
         [Route("ExcluirJogador/{idJogador}")]
-        public IActionResult ExcluirEquipe(int idJogador)
+        
+        /*public IActionResult ExcluirEquipe(int idJogador)
         {
             //Pegar o id de referência, e vou procurar a equipe no banco de dados
-            Jogador jogador = _context.Jogadors.FirstOrDefault(x => x.Id == idJogador); // select * from EQUIPE where id == (valor da equipe da tabela)
+           List<Jogador> listaJogadores = _context.Jogadors.Where(x => x.IdEquipe == idJogador).ToList();
+
+            if (listaJogadores.Count > 0)
+            {
+                //Remover Todos os jogadoresvinculados
+                foreach (Jogador jgd in listaJogadores)
+                {
+                    _context.Remove(jgd);
+                }
+
+                //Salvando a remoção dos jogadores
+                _context.SaveChanges();
+            }
+            //Pegar o id de referência, e vou procurar a equipe no banco de dados
+                Jogador jogador = _context.Jogadors.FirstOrDefault(x => x.Id == idJogador); // select * from EQUIPE where id == (valor da equipe da tabela)
 
 
             _context.Remove(jogador);
+
+            _context.SaveChanges();
+
+            return RedirectToAction("Index");
+        }*/
+
+        [Route("Atualizar/{idJogador}")]
+        public IActionResult Atualizar(int idJogador)
+        {
+            Jogador jogador = _context.Jogadors.FirstOrDefault(x => x.Id == idJogador);
+
+            ViewBag.Jogador = jogador;
+
+            return View();
+        }
+
+        [Route("AtualizarJogador")]
+        public IActionResult AtualizarJogador(Jogador jogador)
+        {
+            _context.Jogadors.Update(jogador);
 
             _context.SaveChanges();
 

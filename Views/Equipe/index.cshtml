@@ -4,7 +4,7 @@
     <h1>Tela de equipe</h1>
 
     @* Formulário de cadastro de equipes *@
-    <form method="POST" asp-action="CadastrarEquipe" asp-controller="Equipe">
+    <form method="POST" asp-action="CadastrarEquipe" asp-controller="Equipe" enctype="multipart/form-data">
         <div class="form-control">
             <label for="nome">Nome da equipe</label>
             <input type="text" name="Nome">
@@ -12,7 +12,7 @@
 
         <div class="form-control">
             <label for="imagem">Imagem da equipe</label>
-            <input type="text" name="Imagem">
+            <input type="file" name="Imagem">
         </div>
 
         <button class="btn btn-primary" type="submit">Cadastrar</button>

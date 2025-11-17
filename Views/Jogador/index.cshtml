@@ -51,9 +51,11 @@
                     <td>@jogador.Email</td>
                     @* Forma de conseguir acessar os dados da equipe relacionada com o jogador *@
                     <td>@jogador.IdEquipeNavigation?.Nome</td>
+
                     <td>
+                        @*<a class="btn btn-primary" href="/Jogador/Atualizar/@jogador.Id">Atualizar</a>*@
                         @* Passando para a função de excluir a referencia do id do jogador *@
-                        <a asp-action="ExcluirJogador" asp-asp-controller="Jogador" asp-route-id="@jogador.Id">Excluir</a>
+                        <a class="btn btn-danger" asp-action="ExcluirJogador" asp-controller="Jogador" asp-route-id="@jogador.Id">Excluir</a>
                     </td>
                 </tr>
             }

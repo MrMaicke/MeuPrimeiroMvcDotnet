@@ -23,7 +23,7 @@ namespace MeuPrimeiroMvc.Controllers
         }
 
         [Route("cadastrar")]
-        public IActionResult CadastrarEquipe(Equipe equipe)
+        public IActionResult CadastrarEquipe(IFormCollection formEquipe)
         {
             // Armazenar a equipe no banco de dados
             _context.Add(equipe);
@@ -38,8 +38,22 @@ namespace MeuPrimeiroMvc.Controllers
         [Route("ExcluirEquipe/{idEquipe}")]
         public IActionResult ExcluirEquipe(int idEquipe)
         {
+            //Verificar se existem jogadores que contenham o vinculo com 
+            List<Jogador> listaJogadores = _context.Jogadors.Where(x => x.IdEquipe == idEquipe).ToList();
+
+            if (listaJogadores.Count > 0)
+            {
+                //Remover Todos os jogadoresvinculados
+                foreach (Jogador jgd in listaJogadores)
+                {
+                    _context.Remove(jgd);
+                }
+
+                //Salvando a remoção dos jogadores
+                _context.SaveChanges();
+            }
             //Pegar o id de referência, e vou procurar a equipe no banco de dados
-            Equipe equipe = _context.Equipes.FirstOrDefault(x => x.Id == idEquipe); // select * from EQUIPE where id == (valor da equipe da tabela)
+                Equipe equipe = _context.Equipes.FirstOrDefault(x => x.Id == idEquipe); // select * from EQUIPE where id == (valor da equipe da tabela)
 
 
             _context.Remove(equipe);

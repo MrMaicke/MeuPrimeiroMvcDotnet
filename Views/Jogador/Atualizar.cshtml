@@ -1,0 +1,23 @@
+@page
+
+<div>
+    <h1>Tela de Atualizar Jogador</h1>
+
+    @* Formulário de cadastro de jogadores *@
+    <form method="PUT" asp-action="AtualizarJogador" asp-controller="Jogador">
+        <input type="hidde" name="Id" value="@ViewBag.Jogador.Id">
+        
+        <div class="form-control">
+            <label for="nome">Nome do Jogador</label>
+            <input type="text" name="Nome" value="@ViewBag.Jogador.Nome">
+        </div>
+
+        <div class="form-control">
+            <label for="imagem">Imagem da Jogador</label>
+            <input type="text" name="Imagem" value="@ViewBag.Jogador.Nome">
+        </div>
+
+        <button class="btn btn-primary" type="submit">Cadastrar</button>
+    </form>
+
+</div>
